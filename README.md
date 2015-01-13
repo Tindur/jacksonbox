@@ -4,8 +4,8 @@ Dependencies
 --------------------------------------
 
 1. [node](http://nodejs.org/download/)
-2. [grunt](https://github.com/gruntjs/grunt-cli) npm install grunt-cli
-2. [bower](http://bower.io/) npm install bower
+2. [grunt](https://github.com/gruntjs/grunt-cli) npm install -g grunt-cli
+2. [bower](http://bower.io/) npm install -g bower
 
 Setup
 --------------------------------------
