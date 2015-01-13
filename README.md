@@ -11,6 +11,7 @@ Setup
 --------------------------------------
 
 Client
+
 Might need elevation (sudo)
 
 ```bash
