@@ -25,7 +25,6 @@ Server
 ```bash
 cd server
 npm install
-bower install
 ```
 
 Running
