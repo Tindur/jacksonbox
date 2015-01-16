@@ -1,7 +1,10 @@
 var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var cors = require('cors');
+app.use(cors());
 
+require('./QGcontroller.js')(app)
 server.listen(1337);
 
 app.get('/', function (req, res) {
@@ -33,6 +36,10 @@ io.on('connection', function (socket) {
 
   socket.on('game:start', function () {
     socket.to(roomId).emit('game:started');
+  });
+
+  socket.on('game:playerData', function (data) {
+    socket.to(roomId).emit('game:playerData', data);
   });
 });
 

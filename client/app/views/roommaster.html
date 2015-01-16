@@ -1,12 +1,16 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row" ng-if="!gameStarted">
     <div class="col-md-offset-4 col-md-4">
       <h3>Tengjast herbergi: {{roomId}}</h3>
       <p>Spilarar: {{users.length}}</p>
       <ul>
         <li ng-repeat="user in users">{{user.username}}</li>
       </ul>
-      <p>{{gameStarted}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <questiongame ng-if="gameStarted"></questiongame>
     </div>
   </div>
 </div>

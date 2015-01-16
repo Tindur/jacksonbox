@@ -4,6 +4,12 @@
       <div class="btn-group btn-group-justified" ng-if="!gameStarted">
         <a href="" class="btn btn-primary btn-md" ng-click="startGame()">Allir mættir</a>
       </div>
+      <div ng-if="gameStarted">
+        <p>{{currentQ.question}}</p>
+        <ul>
+          <li ng-repeat="answer in currentQ.answers">{{answer}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

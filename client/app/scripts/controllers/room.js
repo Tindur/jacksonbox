@@ -15,6 +15,7 @@ angular.module('testApp')
     //
 
     $scope.gameStarted = false;
+    $scope.currentQ = {};
 
     //
     // scope methods
@@ -32,5 +33,10 @@ angular.module('testApp')
     socket.on('game:started', function () {
       console.log('game started');
       $scope.gameStarted = true;
+    });
+
+    socket.on('game:playerData', function (data) {
+      $scope.currentQ = data;
+      console.log(data);
     });
   });
